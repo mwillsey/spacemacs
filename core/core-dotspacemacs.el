@@ -35,20 +35,7 @@
 SPACEMACSDIR environment variable. If neither of these
 directories exist, this variable will be nil.")
 
-  (defvar dotspacemacs-filepath
-    (let ((spacemacs-dir-init (when dotspacemacs-directory
-                                 (concat dotspacemacs-directory
-                                         "init.el"))))
-      (cond
-       (env-init)
-       ((file-exists-p default-init) default-init)
-       ((and dotspacemacs-directory (file-exists-p spacemacs-dir-init)) spacemacs-dir-init)
-       (t default-init)))
-    "Filepath to the installed dotfile. If SPACEMACSDIR is given
-then SPACEMACSDIR/init.el is used. Otherwise, if ~/.spacemacs
-exists, then this is used. If ~/.spacemacs does not exist, then
-check for init.el in dotspacemacs-directory and use this if it
-exists. Otherwise, fallback to ~/.spacemacs"))
+  (defvar dotspacemacs-filepath (concat user-emacs-directory "private/spacemacs.el")))
 
 (defvar dotspacemacs-distribution 'spacemacs
   "Base distribution to use. This is a layer contained in the directory
