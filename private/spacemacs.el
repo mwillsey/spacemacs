@@ -33,7 +33,6 @@ values."
      git
      github
      vagrant
-     ;; pdf-tools
 
      ;; editing
      (spell-checking :variables spell-checking-enable-by-default nil)
@@ -42,17 +41,10 @@ values."
      bibtex
      latex
 
-     ;; c dev
-     (c-c++ :variables c-c++-enable-clang-support t)
      semantic
-     cscope
 
      ;; other langs
-     rust
-     haskell
-     python
      html
-     markdown
      )
    dotspacemacs-additional-packages '(olivetti fill-column-indicator)
    dotspacemacs-frozen-packages '()
