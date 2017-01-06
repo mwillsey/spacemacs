@@ -130,6 +130,8 @@ values."
         spacemacs-theme-org-height nil)
   ;; stop spacemacs from complaining about me setting my path
   (setq exec-path-from-shell-check-startup-files nil)
+  ;; I disabled spacemacs normal custom-file process for this simpler one
+  (when (file-exists-p custom-file) (load custom-file))
   (message "dotspacemacs/user-init complete"))
 
 ;; user/config just loads my own config though org-babel
@@ -138,24 +140,3 @@ values."
   (require 'org)
   (message "Tangling emacs.org...")
   (org-babel-load-file "~/Dropbox/settings/emacs.org"))
-
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (linum-relative evil-unimpaired evil-search-highlight-persist evil-lisp-state evil-indent-plus evil-iedit-state evil-args evil-anzu anzu highlight iedit smartparens emojify circe oauth2 websocket key-chord helm-bibtex org hydra pkg-info epl flx parsebib haml-mode gitignore-mode gh marshal logito pcache ht flyspell-correct with-editor evil goto-chg undo-tree diminish company rust-mode biblio biblio-core packed pythonic f dash s alert log4e gntp avy popup async package-build ivy bind-key auctex yasnippet helm helm-core magit magit-popup git-commit markdown-mode projectile request vagrant-tramp vagrant stickyfunc-enhance srefactor intero flycheck hlint-refactor hindent helm-hoogle helm-cscope xcscope haskell-snippets company-ghci company-ghc ghc haskell-mode cmm-mode yapfify xterm-color which-key web-mode use-package toml-mode toc-org tagedit sql-indent spacemacs-theme smeargle slim-mode slack shell-pop scss-mode sass-mode reveal-in-osx-finder racer quelpa pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools pcre2el pbcopy osx-trash osx-dictionary orgit org-ref org-projectile org-present org-pomodoro org-plus-contrib org-ehtml org-download olivetti ob-sml noflet multi-term mmm-mode minimal-theme markdown-toc magit-gitflow magit-gh-pulls macrostep live-py-mode less-css-mode launchctl hy-mode htmlize help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md flyspell-correct-helm fill-column-indicator exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-surround evil-numbers evil-mc evil-matchit evil-magit evil-exchange evil-escape evil-ediff evil-commentary eshell-z eshell-prompt-extras esh-help ensime emmet-mode elisp-slime-nav eclim disaster cython-mode cmake-mode clang-format cargo bind-map auto-dictionary auto-compile auctex-latexmk anaconda-mode ace-window ace-jump-helm-line))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
