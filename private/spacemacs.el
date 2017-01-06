@@ -45,6 +45,9 @@ values."
 
      ;; other langs
      html
+     racket
+     python
+     graphviz
      )
    dotspacemacs-additional-packages '(olivetti fill-column-indicator)
    dotspacemacs-frozen-packages '()
