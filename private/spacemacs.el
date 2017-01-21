@@ -23,7 +23,8 @@ values."
      ;; evil
      (spacemacs-evil :packages (not evil-nerd-commenter
                                     evil-tutor
-                                    vi-tilde-fringe))
+                                    vi-tilde-fringe
+                                    evil-search-highlight-persist))
      evil-commentary
 
      (spacemacs-org :packages (not org-bullets))
@@ -35,7 +36,7 @@ values."
      vagrant
 
      ;; editing
-     (spell-checking :variables spell-checking-enable-by-default nil)
+     spell-checking
 
      ;; tex
      bibtex
