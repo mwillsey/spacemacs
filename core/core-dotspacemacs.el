@@ -35,7 +35,7 @@
 SPACEMACSDIR environment variable. If neither of these
 directories exist, this variable will be nil.")
 
-  (defvar dotspacemacs-filepath (concat user-emacs-directory "spacemacs.el")))
+    (defvar dotspacemacs-filepath (concat user-emacs-directory "private/spacemacs.el")))
 
 (defvar dotspacemacs-distribution 'spacemacs
   "Base distribution to use. This is a layer contained in the directory
