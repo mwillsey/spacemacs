@@ -34,6 +34,7 @@ values."
      git
      github
      vagrant
+     graphviz
 
      ;; editing
      spell-checking
@@ -44,11 +45,13 @@ values."
 
      semantic
 
-     ;; other langs
+     ;; web
      html
+     markdown
+
+     ;; other langs
      racket
      python
-     graphviz
      )
    dotspacemacs-additional-packages '(olivetti fill-column-indicator)
    dotspacemacs-frozen-packages '()
