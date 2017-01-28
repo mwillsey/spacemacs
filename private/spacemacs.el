@@ -41,9 +41,11 @@ values."
 
      ;; tex
      bibtex
-     latex
+     (latex :variables latex-enable-auto-fill nil)
 
+     ;; c
      semantic
+     (c-c++ :variables c-c++-enable-clang-support t)
 
      ;; web
      html
@@ -53,7 +55,8 @@ values."
      racket
      python
      )
-   dotspacemacs-additional-packages '(olivetti fill-column-indicator)
+   dotspacemacs-additional-packages '(olivetti
+                                      fill-column-indicator)
    dotspacemacs-frozen-packages '()
    dotspacemacs-install-packages 'used-but-keep-unused
    dotspacemacs-excluded-packages '()))
