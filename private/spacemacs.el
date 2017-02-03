@@ -44,8 +44,9 @@ values."
      (latex :variables latex-enable-auto-fill nil)
 
      ;; c
-     semantic
      (c-c++ :variables c-c++-enable-clang-support t)
+     semantic
+     gtags
 
      ;; web
      html
