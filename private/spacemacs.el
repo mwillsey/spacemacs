@@ -59,7 +59,7 @@ values."
    dotspacemacs-additional-packages '(olivetti
                                       fill-column-indicator)
    dotspacemacs-frozen-packages '()
-   dotspacemacs-install-packages 'used-but-keep-unused
+   dotspacemacs-install-packages 'used-only
    dotspacemacs-excluded-packages '()))
 
 (defun dotspacemacs/init ()
