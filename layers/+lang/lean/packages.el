@@ -11,14 +11,15 @@
 
 (defconst lean-packages
   '(lean-mode
-    company-lean
-    helm-lean
+    (company-lean :requires company)
+    (helm-lean :requires helm)
     ))
 
 (defun lean/init-lean-mode ()
   (use-package lean-mode
     :defer t
     :mode ("\\.lean\\'" . lean-mode)
+    :load-path lean-emacs-path
     :config
     (progn
 
@@ -47,5 +48,17 @@
        "SPC" 'lean-hole
        ))))
 
-(defun lean/init-company-lean ())
-(defun lean/init-helm-lean ())
+(defun lean/init-company-lean ()
+  (use-package company-lean
+    :defer t
+    :init (spacemacs|add-company-backends
+            :backends company-lean
+            :modes lean-mode)))
+
+(defun lean/init-helm-lean ()
+  (use-package helm-lean
+    :commands helm-lean-definitons
+    :init
+    (progn
+      (spacemacs/set-leader-keys-for-major-mode 'lean-mode
+        "hd" 'helm-lean-definitions))))
