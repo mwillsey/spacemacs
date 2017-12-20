@@ -18,11 +18,8 @@
 (defun lean/init-lean-mode ()
   (use-package lean-mode
     :defer t
-    :mode ("\\.lean\\'" . lean-mode)
-    :load-path lean-emacs-path
     :config
     (progn
-
       (spacemacs/declare-prefix-for-mode 'lean-mode "mc" "compile")
       (spacemacs/declare-prefix-for-mode 'lean-mode "mh" "documentation")
       (spacemacs/declare-prefix-for-mode 'lean-mode "mp" "process")
